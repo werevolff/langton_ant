@@ -28,10 +28,10 @@ def main() -> None:
         if steps >= steps_limit:
             sys.stdout.write(f'Were made {steps} steps')
             break
-        if current_position[0] < 0 or current_position[0] > field_size[0]:
+        if current_position[0] < 0 or current_position[0] >= field_size[0]:
             sys.stdout.write(f'The ant has left X axis')
             break
-        if current_position[1] < 0 or current_position[1] > field_size[1]:
+        if current_position[1] < 0 or current_position[1] >= field_size[1]:
             sys.stdout.write(f'The ant has left Y axis')
             break
         move_ant()
@@ -113,7 +113,7 @@ def create_image_file() -> None:
     global field_size
     global black_pixels
     bmp_img = MicroBMP(field_size[0], field_size[1], 1)
-    white_array = b'\xFF' * (len(bmp_img.parray))
+    white_array = b'\xFF' * len(bmp_img.parray)
     bmp_img.parray = bytearray(white_array)
     for coord in black_pixels:
         bmp_img[coord[1], coord[0]] = 0
