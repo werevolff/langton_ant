@@ -17,7 +17,6 @@ current_position = (512, 512)
 field_size = (1024, 1024)
 
 
-@profile
 def main() -> None:
     """Run application."""
     global steps
