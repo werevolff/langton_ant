@@ -127,5 +127,6 @@ def get_index_of_black(position: Tuple[int, int]) -> Optional[int]:
     except ValueError:
         return None
 
+
 if __name__ == '__main__':
     main()
