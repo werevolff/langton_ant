@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "langton-ant"
+version = "0.1.0"
+description = "For Rudesktop with love!"
+authors = ["Nikolay Dolganov <ip.dolganov.nn@gmail.com>"]
+readme = "README.md"
+packages = [{include = "langton_ant"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+microbmp = "^0.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+psutil = "^5.9.6"
+memory-profiler = "^0.61.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
