@@ -11,7 +11,6 @@ if TYPE_CHECKING:
 black_pixels = []
 steps = 0
 steps_limit = 100000
-available_directions = ['top', 'right', 'bottom', 'left']
 direction = 'top'
 current_position = (512, 512)
 field_size = (1024, 1024)
